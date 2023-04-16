@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_connection.xml" value="0.10778985507246377" />
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_information.xml" value="0.10778985507246377" />
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_iphone_list_items.xml" value="0.1" />
@@ -11,7 +12,7 @@
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_main.xml" value="0.128" />
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_registration.xml" value="0.128" />
         <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_search.xml" value="0.1" />
-        <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_search_list_items.xml" value="0.2" />
+        <entry key="..\:/Dev/AndroidStudio/AppleBasket4v/app/src/main/res/layout/activity_search_list_items.xml" value="0.264" />
       </map>
     </option>
   </component>
