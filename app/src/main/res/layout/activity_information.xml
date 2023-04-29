@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Information">
+    tools:context=".InformationActivity">
 
     <LinearLayout
 
@@ -45,33 +45,35 @@
             />
 
         <Button
-            android:id="@+id/mobilButton"
+            android:id="@+id/iphoneButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="iPhone" />
 
         <Button
-            android:id="@+id/tabletButton"
+            android:id="@+id/ipadButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="IPAD" />
 
         <Button
-            android:id="@+id/laptopButton"
+            android:id="@+id/macButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MAC" />
 
+
         <ImageView
-            android:id="@+id/mac_cat_text"
+            android:id="@+id/search"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/cardview_default_elevation"
             android:src="@drawable/search_icon"
             />
+
 
         <ImageView
             android:id="@+id/user"

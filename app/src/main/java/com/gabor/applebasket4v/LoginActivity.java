@@ -6,10 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private ImageView mainImage1;
     private ImageView mainImage2;
@@ -22,30 +22,38 @@ public class MainActivity extends AppCompatActivity {
     private Button connect_button;
     private Button information_button;
 
-    private ImageView mobil_cat_pic;
-    private TextView iphone_cat_text;
-    private ImageView tablet_cat_pic;
-    private TextView ipad_cat_text;
-    private ImageView mac_cat_pic;
-    private TextView mac_cat_text;
-
+    private EditText username;
+    private EditText password;
+    private Button loginButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         init();
         standardReferences();
+        specialReferences();
 
+    }
 
-        mobil_cat_pic.setOnClickListener(new View.OnClickListener() {
+    private void specialReferences() {
+
+        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, IphonesActivity.class);
-                startActivity(intent);
-                finish();
+                if (username.getText().length() == 0 && password.getText().length() == 0){
+                    Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else{
+                    login();
+                }
             }
         });
+    }
+
+    private void login() {
+
     }
 
     private void standardReferences() {
@@ -53,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -63,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         iphoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, IphonesActivity.class);
+                Intent intent = new Intent(LoginActivity.this, IphonesActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -72,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(LoginActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -81,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SearchActivity.class);
+                Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -90,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ConnectionActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ConnectionActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -99,17 +107,14 @@ public class MainActivity extends AppCompatActivity {
         information_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InformationActivity.class);
+                Intent intent = new Intent(LoginActivity.this, InformationActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
     }
 
-    //tablet és ipad fülek külön? vagy ugynazon a lapon, mert az adatok ugyanazok lesznek kb.
-
-    public void init(){
+    public void init() {
         mainImage1 = findViewById(R.id.mainImage1);
         mainImage2 = findViewById(R.id.mainImage2);
         logo = findViewById(R.id.logo);
@@ -121,12 +126,8 @@ public class MainActivity extends AppCompatActivity {
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
 
-        mobil_cat_pic = findViewById(R.id.mobil_cat_pic);
-        iphone_cat_text = findViewById(R.id.iphone_cat_text);
-        tablet_cat_pic = findViewById(R.id.tablet_cat_pic);
-        ipad_cat_text = findViewById(R.id.ipad_cat_text);
-        mac_cat_pic = findViewById(R.id.mac_cat_pic);
-        mac_cat_text = findViewById(R.id.mac_cat_text);
-
+        username = findViewById(R.id.username);
+        password = findViewById(R.id.password);
+        loginButton = findViewById(R.id.login);
     }
 }

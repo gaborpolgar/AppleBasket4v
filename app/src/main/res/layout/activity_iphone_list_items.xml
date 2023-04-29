@@ -8,7 +8,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textViewDelete"
         android:text="Törlés     "
-
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -18,7 +17,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/textViewToBasket"
         android:text="Kosárba    "
-
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@id/textViewDelete"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -36,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textViewStorage"
-        android:text="(33)"
+        android:text="(128GB)"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/textViewModel"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -44,8 +42,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewColour"
-        android:text="(33)"
+        android:id="@+id/textViewColor"
+        android:text="(fehér)"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/textViewStorage"
         app:layout_constraintTop_toTopOf="parent"/>

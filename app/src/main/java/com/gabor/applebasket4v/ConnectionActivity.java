@@ -3,13 +3,14 @@ package com.gabor.applebasket4v;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+//import android.net.Uri;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class Connection extends AppCompatActivity {
+public class ConnectionActivity extends AppCompatActivity {
 
     private ImageView mainImage1;
     private ImageView mainImage2;
@@ -26,13 +27,17 @@ public class Connection extends AppCompatActivity {
     private Button serviceButton;
     private Button customerServiceButton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connection);
         init();
+        standardReferences();
+        specialReferences();
+
+    }
+
+    private void specialReferences() {
 
         shopsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +65,64 @@ public class Connection extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void standardReferences() {
+
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        iphoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, IphonesActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, SearchActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        connect_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, ConnectionActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        information_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, InformationActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
     }
 

@@ -11,12 +11,19 @@ public class Iphone_list_items extends AppCompatActivity {
     private TextView textViewToBasket;
     private TextView textViewModel;
     private TextView textViewStorage;
-    private TextView textViewColour;
+    private TextView textViewColor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_iphone_list_items);
+        init();
+        standardReferences();
+    }
+
+    private void standardReferences() {
+
+
     }
 
     public void init() {
@@ -24,7 +31,7 @@ public class Iphone_list_items extends AppCompatActivity {
         textViewToBasket = findViewById(R.id.textViewToBasket);
         textViewModel = findViewById(R.id.textViewModel);
         textViewStorage = findViewById(R.id.textViewStorage);
-        textViewColour = findViewById(R.id.textViewColour);
+        textViewColor = findViewById(R.id.textViewColor);
 
     }
 }

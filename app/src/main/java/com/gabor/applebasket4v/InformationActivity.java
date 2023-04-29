@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class Information extends AppCompatActivity {
+public class InformationActivity extends AppCompatActivity {
 
     private ImageView mainImage1;
     private ImageView mainImage2;
@@ -32,6 +32,7 @@ public class Information extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
         init();
+        standardReferences();
 
         aszfButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,64 @@ public class Information extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/shipping"));
+                startActivity(intent);
+                finish();
+            }
+        });
+    }
+
+    private void standardReferences() {
+
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        iphoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, IphonesActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, SearchActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        connect_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, ConnectionActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        information_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, InformationActivity.class);
                 startActivity(intent);
                 finish();
             }
