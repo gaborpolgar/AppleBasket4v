@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MacBookActivity">>
+    tools:context=".MacbookActivity">>
 
     <LinearLayout
 
@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/logo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginTop="@dimen/cardview_default_elevation"
             android:src="@drawable/apple_128_icon"
             />
@@ -68,16 +68,23 @@
 
         <ImageView
             android:id="@+id/search"
-            android:layout_width="40dp"
+            android:layout_width="35dp"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/cardview_default_elevation"
             android:src="@drawable/search_icon"
             />
 
+        <ImageView
+            android:id="@+id/basket"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/cardview_default_elevation"
+            android:src="@drawable/basket"
+            />
 
         <ImageView
             android:id="@+id/user"
-            android:layout_width="40dp"
+            android:layout_width="35dp"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/cardview_default_elevation"
             android:src="@drawable/user"

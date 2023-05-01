@@ -42,7 +42,7 @@ public class ConnectionActivity extends AppCompatActivity {
         shopsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/shops"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/shops"));
                 startActivity(intent);
                 finish();
             }
@@ -51,7 +51,7 @@ public class ConnectionActivity extends AppCompatActivity {
         serviceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/shops"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/shops"));
                 startActivity(intent);
                 finish();
             }
@@ -60,7 +60,7 @@ public class ConnectionActivity extends AppCompatActivity {
         customerServiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/shops"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/shops"));
                 startActivity(intent);
                 finish();
             }

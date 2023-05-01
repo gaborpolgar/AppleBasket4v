@@ -85,7 +85,7 @@ public class SearchActivity extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SearchActivity.this, LoginActivity.class);
+                Intent intent = new Intent(SearchActivity.this, UserActivity.class);
                 startActivity(intent);
                 finish();
             }

@@ -37,7 +37,7 @@ public class InformationActivity extends AppCompatActivity {
         aszfButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/aszf"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/aszf"));
                 startActivity(intent);
                 finish();
             }
@@ -46,7 +46,7 @@ public class InformationActivity extends AppCompatActivity {
         customerInformationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/info"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/info"));
                 startActivity(intent);
                 finish();
             }
@@ -55,7 +55,7 @@ public class InformationActivity extends AppCompatActivity {
         shippingAndPayment_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://127.0.0.1:8000/frontend/footer_components/shipping"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://10.0.2.2:8000/frontend/footer_components/shipping"));
                 startActivity(intent);
                 finish();
             }
