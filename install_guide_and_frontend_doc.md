@@ -6,4 +6,4 @@ A programot szükséges buildelni, majd az elkészült .apk kiterjesztésű tele
 
 A program indításakor a főképernyő fogad.
 
-![Fokepernyo](app/src/main/res/drawable/doc_pic/fooldal.jpg)
+![Fokepernyo](app/src/main/res/drawable/doc_pic/fooldal.png)
