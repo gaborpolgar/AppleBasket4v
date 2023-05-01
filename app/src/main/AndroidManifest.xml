@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gabor.applebasket4v">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +16,15 @@
         android:theme="@style/Theme.AppleBasket4v"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <activity
+            android:name=".BasketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MacbookActivity"
+            android:exported="false" />
         <activity
             android:name=".ipadListItemsActivity"
             android:exported="false" />

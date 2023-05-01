@@ -64,6 +64,24 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
+        ipadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchActivity.this, IpadActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        macButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SearchActivity.this, MacbookActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

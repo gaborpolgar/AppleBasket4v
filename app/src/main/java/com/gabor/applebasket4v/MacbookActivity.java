@@ -32,7 +32,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-public class IphonesActivity extends AppCompatActivity {
+public class MacbookActivity extends AppCompatActivity {
 
     private ImageView mainImage1;
     private ImageView mainImage2;
@@ -69,7 +69,7 @@ public class IphonesActivity extends AppCompatActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, MainActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -78,7 +78,7 @@ public class IphonesActivity extends AppCompatActivity {
         iphoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, IphonesActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, IphonesActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -87,7 +87,7 @@ public class IphonesActivity extends AppCompatActivity {
         ipadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, IpadActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, IpadActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -96,7 +96,7 @@ public class IphonesActivity extends AppCompatActivity {
         macButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, MacbookActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, MacbookActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -105,7 +105,7 @@ public class IphonesActivity extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -114,7 +114,7 @@ public class IphonesActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, SearchActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, SearchActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -123,7 +123,7 @@ public class IphonesActivity extends AppCompatActivity {
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, ConnectionActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, ConnectionActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -132,7 +132,7 @@ public class IphonesActivity extends AppCompatActivity {
         information_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(IphonesActivity.this, InformationActivity.class);
+                Intent intent = new Intent(MacbookActivity.this, InformationActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -158,7 +158,7 @@ public class IphonesActivity extends AppCompatActivity {
     private class ProductAdapter extends ArrayAdapter<Product> {
 
         public ProductAdapter() {
-            super(IphonesActivity.this, R.layout.activity_iphone_list_items, products);
+            super(MacbookActivity.this, R.layout.activity_iphone_list_items, products);
         }
 
         @NonNull
@@ -176,12 +176,13 @@ public class IphonesActivity extends AppCompatActivity {
             String filenameWithoutExtension = temp[0].toLowerCase();
             filenameWithoutExtension = filenameWithoutExtension;
 
-            int drawableResource = getResources().getIdentifier("iphone", "drawable", getPackageName());
+            int drawableResource = getResources().getIdentifier("macbook_pro2", "drawable", getPackageName());
             imageViewIphonePic.setImageResource(drawableResource);
 
             textViewModel.setText(actualProduct.getModel());
-            textViewStorage.setText("\nHáttértára: " + actualProduct.getStorage() + "\n");
-            textViewColor.setText("\nSzíne: " + actualProduct.getColor() + "\n");
+            textViewStorage.setText("Háttértár:" + actualProduct.getStorage() + " GB");
+            textViewColor.setText("Szín" + actualProduct.getColor());
+
 
           /*  String filenameWithoutExtension = temp[0].toLowerCase();
             String afilenameWithoutExtension = "a" + filenameWithoutExtension;
@@ -227,8 +228,8 @@ public class IphonesActivity extends AppCompatActivity {
                         response = RequestHandler.delete(requestUrl + "/" + requestParams);
                         break;
                 }
-                } catch (IOException e){
-                Toast.makeText(IphonesActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+            } catch (IOException e){
+                Toast.makeText(MacbookActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
             }
             return response;
         }
@@ -239,7 +240,7 @@ public class IphonesActivity extends AppCompatActivity {
             progressBar.setVisibility(View.VISIBLE);
         }
 
-         //ez kellett valamiért
+        //ez kellett valamiért
         @RequiresApi(api = Build.VERSION_CODES.N)
         @Override
         protected void onPostExecute(Response response) {
@@ -247,7 +248,7 @@ public class IphonesActivity extends AppCompatActivity {
             progressBar.setVisibility(View.GONE);
             Gson converter = new Gson();
             if (response.getResponseCode() > 400 ){
-                Toast.makeText(IphonesActivity.this, "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MacbookActivity.this, "Hiba történt a kérés feldolgozása során", Toast.LENGTH_SHORT).show();
                 Log.d("onPostExecuteError:", response.getContent());
             }
             switch(requestType){
@@ -255,7 +256,7 @@ public class IphonesActivity extends AppCompatActivity {
                     Product[] productsArray = converter.fromJson(response.getContent(), Product[].class);
                     products.clear();
                     for (int i = 0; i < productsArray.length; i++) {
-                        if (productsArray[i].getCategory_id() == 1){
+                        if (productsArray[i].getCategory_id() == 3){
                             products.add(productsArray[i]);
                         }
                     }

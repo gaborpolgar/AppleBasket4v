@@ -6,13 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
-
-public class RegistrationActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity {
 
     private ImageView mainImage1;
     private ImageView mainImage2;
@@ -25,36 +21,13 @@ public class RegistrationActivity extends AppCompatActivity {
     private Button connect_button;
     private Button information_button;
 
-    private TextInputLayout inputLayoutName;
-    private EditText nameText;
-    private TextInputLayout inputLayoutEmail;
-    private EditText emailText;
-    private TextInputLayout inputLayoutPassword;
-    private EditText passwordText;
-    private TextInputLayout inputLayoutPasswordConfirm;
-    private EditText passwordConfirmText;
-    private Button registrationButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registration);
+        setContentView(R.layout.activity_user);
         init();
         standardReferences();
-        specialReferences();
-    }
-
-    private void specialReferences() {
-        registrationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (nameText.getText().length() == 0 || emailText.getText().length() == 0 || passwordText.getText().length() == 0 || passwordConfirmText.getText().length() == 0){
-                    Toast.makeText(RegistrationActivity.this, "Az űrlap összes mezőjének kitöltése kötelező!", Toast.LENGTH_SHORT).show();
-                    //finish();
-                } 
-            }
-        });
-
+        //specialReferences();
     }
 
     private void standardReferences() {
@@ -62,17 +35,16 @@ public class RegistrationActivity extends AppCompatActivity {
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, MainActivity.class);
+                Intent intent = new Intent(UserActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-
         iphoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, IphonesActivity.class);
+                Intent intent = new Intent(UserActivity.this, IphonesActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -81,7 +53,7 @@ public class RegistrationActivity extends AppCompatActivity {
         ipadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, IpadActivity.class);
+                Intent intent = new Intent(UserActivity.this, IpadActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -90,7 +62,7 @@ public class RegistrationActivity extends AppCompatActivity {
         macButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, MacbookActivity.class);
+                Intent intent = new Intent(UserActivity.this, MacbookActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -99,7 +71,7 @@ public class RegistrationActivity extends AppCompatActivity {
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
+                Intent intent = new Intent(UserActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -108,7 +80,7 @@ public class RegistrationActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, SearchActivity.class);
+                Intent intent = new Intent(UserActivity.this, SearchActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -117,7 +89,7 @@ public class RegistrationActivity extends AppCompatActivity {
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, ConnectionActivity.class);
+                Intent intent = new Intent(UserActivity.this, ConnectionActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -126,11 +98,13 @@ public class RegistrationActivity extends AppCompatActivity {
         information_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegistrationActivity.this, InformationActivity.class);
+                Intent intent = new Intent(UserActivity.this, InformationActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+
+
     }
 
     public void init() {
@@ -144,12 +118,6 @@ public class RegistrationActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
-
-        inputLayoutName = findViewById(R.id.inputLayoutName);
-        nameText = findViewById(R.id.nameText);
-        inputLayoutEmail = findViewById(R.id.inputLayoutEmail);
-        inputLayoutPasswordConfirm = findViewById(R.id.inputLayoutPasswordConfirm);
-        passwordConfirmText = findViewById(R.id.passwordConfirmText);
-        registrationButton = findViewById(R.id.login);
     }
+
 }

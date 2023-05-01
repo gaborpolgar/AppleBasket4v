@@ -3,6 +3,7 @@ package com.gabor.applebasket4v;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Iphone_list_items extends AppCompatActivity {
@@ -12,6 +13,10 @@ public class Iphone_list_items extends AppCompatActivity {
     private TextView textViewModel;
     private TextView textViewStorage;
     private TextView textViewColor;
+    private TextView textViewPrice;
+    private TextView textViewStock;
+    private ImageView iphonePic;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,9 @@ public class Iphone_list_items extends AppCompatActivity {
         textViewModel = findViewById(R.id.textViewModel);
         textViewStorage = findViewById(R.id.textViewStorage);
         textViewColor = findViewById(R.id.textViewColor);
+        iphonePic = findViewById(R.id.imageViewIphonePic);
+        textViewPrice = findViewById(R.id.textViewPrice);
+        textViewStock = findViewById(R.id.textViewStock);
 
     }
 }

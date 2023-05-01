@@ -3,50 +3,92 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
         android:id="@+id/textViewDelete"
-        android:text="Törlés     "
-        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="132dp"
+        android:text="Törlés  "
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
         android:id="@+id/textViewToBasket"
-        android:text="Kosárba    "
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@id/textViewDelete"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:layout_marginEnd="12dp"
+        android:text="Kosárba "
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/textViewDelete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewIphonePic"
+        android:layout_width="182dp"
+        android:layout_height="192dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="148dp"
+        android:src="@drawable/apple_128_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textViewModel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
         android:text="iPhone"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textViewStorage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewStorage"
-        android:text="(128GB)"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="52dp"
+        android:text="Háttértára: 128GB"
         android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@id/textViewModel"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textViewColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewColor"
-        android:text="(fehér)"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:text="Színe: fehér"
         android:textSize="20sp"
-        app:layout_constraintStart_toEndOf="@id/textViewStorage"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/textViewModel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="96dp"
+        android:text="Ár: 100.000 Ft"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/textViewModel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="124dp"
+        android:text="Készleten: 5 db"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/textViewModel"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

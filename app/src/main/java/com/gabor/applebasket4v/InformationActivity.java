@@ -83,6 +83,24 @@ public class InformationActivity extends AppCompatActivity {
             }
         });
 
+        ipadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, IpadActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        macButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InformationActivity.this, MacbookActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

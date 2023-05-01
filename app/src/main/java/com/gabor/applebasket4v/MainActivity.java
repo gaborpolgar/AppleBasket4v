@@ -46,6 +46,24 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        tablet_cat_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IpadActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        mac_cat_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MacbookActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     private void standardReferences() {
@@ -64,6 +82,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, IphonesActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        ipadButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, IpadActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        macButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MacbookActivity.class);
                 startActivity(intent);
                 finish();
             }
