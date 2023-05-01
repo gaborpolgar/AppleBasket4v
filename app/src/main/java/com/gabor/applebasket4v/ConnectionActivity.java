@@ -22,6 +22,7 @@ public class ConnectionActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     private Button shopsButton;
     private Button serviceButton;
@@ -123,6 +124,16 @@ public class ConnectionActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ConnectionActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,6 +170,7 @@ public class ConnectionActivity extends AppCompatActivity {
         shopsButton = findViewById(R.id.shopsButton);
         serviceButton = findViewById(R.id.serviceButton);
         customerServiceButton = findViewById(R.id.customerServiceButton);
+        basket =findViewById(R.id.basket);
     }
 
 }

@@ -44,6 +44,7 @@ public class MacbookActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     private List<Product> products = new ArrayList<>();
     //10.0.2.2: s? s nélkül jó most
@@ -120,6 +121,16 @@ public class MacbookActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MacbookActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +161,7 @@ public class MacbookActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
+        basket = findViewById(R.id.basket);
 
         progressBar = findViewById(R.id.progressBar);
         listViewPhones = findViewById(R.id.listViewPhones);

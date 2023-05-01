@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     private EditText username;
     private EditText password;
@@ -113,6 +114,16 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -143,6 +154,7 @@ public class LoginActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
+        basket = findViewById(R.id.basket);
 
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);

@@ -20,6 +20,7 @@ public class UserActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +87,16 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,6 +129,7 @@ public class UserActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
+        basket = findViewById(R.id.basket);
     }
 
 }

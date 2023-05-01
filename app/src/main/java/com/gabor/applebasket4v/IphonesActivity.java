@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class IphonesActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     private List<Product> products = new ArrayList<>();
     //10.0.2.2: s? s nélkül jó most
@@ -120,6 +122,16 @@ public class IphonesActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IphonesActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +162,7 @@ public class IphonesActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
+        basket = findViewById(R.id.basket);
 
         progressBar = findViewById(R.id.progressBar);
         listViewPhones = findViewById(R.id.listViewPhones);

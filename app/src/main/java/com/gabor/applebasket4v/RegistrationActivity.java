@@ -24,6 +24,7 @@ public class RegistrationActivity extends AppCompatActivity {
     private ImageView user;
     private Button connect_button;
     private Button information_button;
+    private ImageView basket;
 
     private TextInputLayout inputLayoutName;
     private EditText nameText;
@@ -114,6 +115,16 @@ public class RegistrationActivity extends AppCompatActivity {
             }
         });
 
+        basket.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegistrationActivity.this, BasketActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
         connect_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,6 +155,7 @@ public class RegistrationActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         connect_button = findViewById(R.id.connect_button);
         information_button = findViewById(R.id.information_button);
+        basket = findViewById(R.id.basket);
 
         inputLayoutName = findViewById(R.id.inputLayoutName);
         nameText = findViewById(R.id.nameText);
