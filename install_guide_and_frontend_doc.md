@@ -21,7 +21,7 @@ Amennyiben a kapcsolat gombra kattintunk bárhol, akkor megjelenik a kapcsolat a
 
 Ugyanez igaz az információk aloldalra.
 
-![informacio](app/src/main/res/drawable/doc_pic/informacio.png)
+![informacio](app/src/main/res/drawable/doc_pic/informaciok.png)
 
 Amennyiben az alma logóra kattintunk a fejléc bal első ikonjára, újra a főoldalra navigálhatunk vissza.
 Amennyiben a nagyító ikonra kattintunk, úgy megjelenik a termékkereső.
@@ -40,7 +40,7 @@ Amennyiben itt nem töltjük ki egyik mezőt sem, akkor a "bejelentkezés vagy r
 
 ![Regisztracio](app/src/main/res/drawable/doc_pic/regisztracio.png)
 
-Amennyiben már be vagyunk jelentkezve, akkor a felhasználó ikonjára kattintva az adott bejelentkezett felhasználó adatlapja jelenik meg, név, email cím ill. rendeléseim gomb, továbbá alul a kijelentkezés gomb jelenik meg, melynek megnyomásával az aktuális felhasználó kijelentkezését lehet kezdeményezni, mellyel a főképernyőre jutunk ismét.
+Amennyiben már be vagyunk jelentkezve, akkor a felhasználó ikonjára kattintva az adott bejelentkezett felhasználó adatlapja jelenik meg, név, email cím ill. rendeléseim felirat, továbbá alul a kijelentkezés gomb jelenik meg, melynek megnyomásával az aktuális felhasználó kijelentkezését lehet kezdeményezni, mellyel a főképernyőre jutunk ismét.
 
 ![Felhasznalo](app/src/main/res/drawable/doc_pic/felhasznalo.png)
 
